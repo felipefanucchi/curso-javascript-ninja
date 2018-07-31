@@ -135,8 +135,8 @@ Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
 com metragens diferentes passadas por parâmetro.
 */
 pessoa.andar(5);
-pessoa.andar(10);
-pessoa.andar(5);
+pessoa.andar(100);
+pessoa.andar(200);
 
 /*
 A pessoa ainda está andando? (Use a instrução para responder e comentários
@@ -160,7 +160,7 @@ pessoa.andando; //false
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
 */
-pessoa.caminhouQuantosMetros; //20
+pessoa.caminhouQuantosMetros; //305
 
 /*
 Agora vamos deixar a brincadeira um pouco mais divertida! :D
@@ -196,7 +196,7 @@ pessoa.apresentacao = function() {
         meterStr = 'metro';
     }
 
-    return `Olá, eu sou ${genderTreatment} ${this.nome} ${this.sobrenome}, tenho ${this.idade} ${ageTreatment}, ${this.altura}, meu peso é ${this.peso} e, só hoje, eu já caminhei ${this.caminhouQuantosMetros} ${meterStr}!`;
+    return `Olá, eu sou ${genderTreatment} ${this.nome} ${this.sobrenome}, tenho ${this.idade} ${ageTreatment}, ${this.altura}, meu peso é ${this.peso}m e, só hoje, eu já caminhei ${this.caminhouQuantosMetros} ${meterStr}!`;
 }
 
 // Agora, apresente-se ;)
