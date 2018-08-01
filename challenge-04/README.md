@@ -112,12 +112,12 @@ carro.addPessoas = function(num) {
     var somente1pessoa = (this.quantidadePessoas === 1) ? 'pessoa' : 'pessoas';
     var umaPessoa = this.quantidadePessoas === this.assentos -1 ? 'pessoa' : 'pessoas'; 
 
-    if(num > pessoasRestantes && this.quantidadePessoas > this.assentos) {
+    if(num > pessoasRestantes) {
         this.quantidadePessoas -= num;
         return `Só cabem mais ${pessoasRestantes} ${umaPessoa}!`;
     }
 
-    if(this.quantidadePessoas >= this.assentos) {
+    if(this.quantidadePessoas > this.assentos) {
         return 'O carro está lotado';
     }
 
