@@ -108,10 +108,10 @@ carro.addPessoas = function(num) {
     var pessoasRestantes = this.assentos - this.quantidadePessoas;
     var totalPessoas = this.quantidadePesoas + num;
     var somente1pessoa = (totalPessoas === 1) ? 'pessoa' : 'pessoas';
-    var umaPessoa = totalPessoas === this.assentos -1 ? 'pessoa' : 'pessoas'; 
+    var ultimaPessoa = totalPessoas === this.assentos -1 ? 'pessoa' : 'pessoas'; 
 
     if(num > pessoasRestantes && totalPessoas < this.assentos) {
-        return `Só cabem mais ${pessoasRestantes} ${umaPessoa}!`;
+        return `Só cabem mais ${pessoasRestantes} ${ultimaPessoa}!`;
     }
 
     if(totalPessoas > this.assentos) {
