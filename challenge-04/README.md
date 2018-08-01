@@ -106,20 +106,19 @@ citado acima, no lugar de "pessoas".
 */
 carro.addPessoas = function(num) {
     var pessoasRestantes = this.assentos - this.quantidadePessoas;
+    var totalPessoas = this.quantidadePesoas + num;
+    var somente1pessoa = (totalPessoas === 1) ? 'pessoa' : 'pessoas';
+    var umaPessoa = totalPessoas === this.assentos -1 ? 'pessoa' : 'pessoas'; 
 
-    this.quantidadePessoas += num;
-
-    var somente1pessoa = (this.quantidadePessoas === 1) ? 'pessoa' : 'pessoas';
-    var umaPessoa = this.quantidadePessoas === this.assentos -1 ? 'pessoa' : 'pessoas'; 
-
-    if(num > pessoasRestantes && this.quantidadePessoas < this.assentos) {
-        this.quantidadePessoas -= num;
+    if(num > pessoasRestantes && totalPessoas < this.assentos) {
         return `Só cabem mais ${pessoasRestantes} ${umaPessoa}!`;
     }
 
-    if(this.quantidadePessoas > this.assentos) {
+    if(totalPessoas > this.assentos) {
         return 'O carro está lotado';
     }
+   
+    this.quantidadePessoas += num;
 
     return `Já temos ${this.quantidadePessoas} ${somente1pessoa} no carro.`;
 }
