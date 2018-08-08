@@ -74,7 +74,7 @@ function book(name) {
         }
     }
 
-    if(name === undefined) return livros;
+    if(!name) return livros;
 
     var livrosNomes = Object.keys(livros);
     var containsBook = livrosNomes.some(e => e === name);
